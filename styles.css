@@ -1,0 +1,135 @@
+/* Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  :root {
+    --primary-color: #da3e0f;
+    --secondary-color:  #ea7a7a;
+    --light-color: #faf4f4;
+    --accent-color:  #142187;
+    --dark-color: #212731;
+    --gray-color: #666;
+    --light-gray: #f4f4f4;
+    
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+  }
+  
+  html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
+    color: var(--dark-color);
+    background-color: #fff;
+  }
+  
+  /* Typography */
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+  }
+  
+  p {
+    margin-bottom: 1rem;
+  }
+  
+  a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: var(--transition);
+  }
+  
+  a:hover {
+    color: var(--accent-color);
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--accent-color);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 600;
+    transition: var(--transition);
+  }
+  
+  .btn:hover {
+    background-color: #292fcd;
+    color: #fff;
+    transform: translateY(-3px);
+  }
+  
+  /* Page Sections */
+  section {
+    padding: 4rem 0;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    html {
+      font-size: 14px;
+    }
+  
+    h1 {
+      font-size: 2rem;
+    }
+  
+    h2 {
+      font-size: 1.75rem;
+    }
+  
+    h3 {
+      font-size: 1.25rem;
+    }
+    
+    section {
+      padding: 3rem 0;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    html {
+      font-size: 12px;
+    }
+    
+    h1 {
+      font-size: 1.75rem;
+    }
+    
+    section {
+      padding: 2rem 0;
+    }
+  }

@@ -1,0 +1,246 @@
+/* Page Header */
+.page-header {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 3rem 0;
+    text-align: center;
+  }
+  
+  .page-header h1 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .page-header p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .promocao-header {
+    background-color: var(--accent-color);
+  }
+  
+  /* Produtos Section */
+  .produtos {
+    padding: 4rem 0;
+  }
+  
+  .produtos .container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 2rem;
+  }
+  
+  /* Filtros */
+  .filtros {
+    padding: 1.5rem;
+    background-color: var(--light-color);
+    border-radius: 8px;
+    position: sticky;
+    top: 100px;
+    height: fit-content;
+  }
+  
+  .filtros h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+  }
+  
+  .filtros ul li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .filtros ul li a {
+    color: var(--dark-color);
+    transition: var(--transition);
+    display: block;
+    padding: 0.5rem;
+    border-radius: 4px;
+  }
+  
+  .filtros ul li a:hover,
+  .filtros ul li a.active {
+    background-color: var(--secondary-color);
+    color: var(--dark-color);
+    padding-left: 1rem;
+  }
+  
+  /* Produtos Grid */
+  .produtos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  
+  .produto-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+  }
+  
+  .produto-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .produto-imagem {
+    position: relative;
+    overflow: hidden;
+    height: 250px;
+  }
+  
+  .produto-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .produto-card:hover .produto-imagem img {
+    transform: scale(1.05);
+  }
+  
+  .produto-info {
+    padding: 1.25rem;
+  }
+  
+  .produto-info h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+  }
+  
+  .produto-info p {
+    color: var(--gray-color);
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .produto-preco {
+    font-weight: 600;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+  }
+  
+  /* Promoções estilos específicos */
+  .promocao .produto-imagem {
+    position: relative;
+  }
+  
+  .desconto-tag {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: var(--accent-color);
+    color: #fff;
+    padding: 0.5rem;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+  
+  .preco-antigo {
+    text-decoration: line-through;
+    color: var(--gray-color);
+    font-size: 0.9rem;
+    margin-right: 0.5rem;
+  }
+  
+  /* Responsive */
+  @media (max-width: 992px) {
+    .produtos .container {
+      grid-template-columns: 200px 1fr;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .produtos .container {
+      grid-template-columns: 1fr;
+    }
+    
+    .filtros {
+      position: static;
+      margin-bottom: 2rem;
+    }
+    
+    .filtros ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    
+    .filtros ul li {
+      margin-bottom: 0;
+    }
+    
+    .filtros ul li a {
+      padding: 0.5rem 1rem;
+      background-color: var(--light-color);
+      border-radius: 20px;
+    }
+    
+    .filtros ul li a:hover,
+    .filtros ul li a.active {
+      background-color: var(--secondary-color);
+      padding-left: 1rem;
+    }
+    
+    .produtos-grid {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .page-header {
+      padding: 2rem 0;
+    }
+    
+    .produtos {
+      padding: 2rem 0;
+    }
+    
+    .produtos-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+.btn-adicionar {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: var(--transition);
+  width: 100%;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-adicionar:hover {
+  background-color: var(--accent-color);
+  transform: translateY(-2px);
+}
+
+.btn-adicionar i {
+  font-size: 1rem;
+}
+
+.carrinho-menu {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.carrinho-count {
+  background-color: var(--accent-color);
+  color: white;
+  border-radius: 50%;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.75rem;
+}
